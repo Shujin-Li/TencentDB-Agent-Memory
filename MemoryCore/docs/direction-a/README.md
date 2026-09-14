@@ -111,21 +111,20 @@ Post-T1 开发阶段稳定性检查：
 ```text
 .
 ├─ README.md
-├─ report/
-│  ├─ 方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.md
-│  ├─ 方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.pdf
-│  └─ 方向A_最终报告_图表/
-├─ source/
-│  └─ MemoryCore/
+├─ 方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.md
+├─ 方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.pdf
+├─ 方向A_最终报告_图表/
 ├─ analysis/
 ├─ reproducibility/
-└─ evidence/
+├─ evidence/
+├─ ../../src/evaluation/direction-a/
+└─ ../../scripts/direction-a/
 ```
 
 其中：
 
-- `report/`：最终方案介绍与测试结论报告；
-- `source/MemoryCore/`：方向A 最终实现代码与对应测试；
+- 本目录的 `FINAL2` Markdown / PDF：最终方案介绍与测试结论报告；
+- `../../src/evaluation/direction-a/` 与 `../../scripts/direction-a/`：方向A 最终实现代码与对应测试；
 - `analysis/`：最终分析结果与重建脚本；
 - `reproducibility/`：复现说明、测试清单和文件哈希；
 - `evidence/`：最终结果对应的冻结证据与必要审计材料。
@@ -136,7 +135,7 @@ Post-T1 开发阶段稳定性检查：
 
 如果只想快速了解项目，建议依次阅读：
 
-1. `report/方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.pdf`
+1. `方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.pdf`
 2. 本 README
 3. `analysis/FINAL_HELDOUT_ANALYSIS.json`
 4. `analysis/FINAL_METHOD_METRICS.csv`
@@ -144,7 +143,7 @@ Post-T1 开发阶段稳定性检查：
 
 如果需要查看完整技术实现，再阅读：
 
-`source/MemoryCore/`
+`../../src/evaluation/direction-a/`
 
 ---
 
@@ -154,11 +153,9 @@ Post-T1 开发阶段稳定性检查：
 
 R1 用于核对最终 Fresh 结果，不需要重新调用模型服务商。
 
-从提交包根目录运行：
-
-```bash
-node analysis/scripts/rebuild_direction_a_final_analysis_PORTABLE.mjs
-```
+portable 脚本、已冻结输出和 clean-directory 验证记录保存在 `analysis/`。
+完整 R1 需要最终提交包中的 allowlist 证据；本 GitHub 目录按公开边界不包含
+raw trajectory、provider payload、prepared-tasks 和 provenance-only 文件。
 
 该 portable 脚本已经通过 clean-directory 验证，并保持与原最终分析脚本相同的科学结果。
 
@@ -248,6 +245,6 @@ node analysis/scripts/rebuild_direction_a_final_analysis_PORTABLE.mjs
 
 详细方法、实验过程、结果与限制请以：
 
-`report/方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.pdf`
+`方向A_方案介绍与测试结论报告_李姝瑾_FINAL2.pdf`
 
 为主。
