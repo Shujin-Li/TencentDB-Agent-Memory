@@ -1,12 +1,11 @@
 {
   "schemaVersion": "direction-a.final-test-manifest.v1",
-  "count": 10,
+  "count": 9,
   "runner": "vitest",
   "workingDirectory": "MemoryCore",
   "providerPolicy": "zero-provider; provider credentials unset",
   "tests": [
     {"path":"src/evaluation/direction-a/formal/evo-build-failure-anti-censoring.test.ts","sha256":"50bc093d9fcc3a36e68c1360acedb1c48e6e222bb5cab85c44114a193c0be296"},
-    {"path":"src/evaluation/direction-a/formal/evo-fresh-prefix-environment-budget-recovery.test.ts","sha256":"8256462096e7dbc3d28522de0b54527e20006940eff72f8a71164fb38cc45881"},
     {"path":"src/evaluation/direction-a/formal/evo-t1-anti-censoring-continuation.test.ts","sha256":"123c086ac10655005b707d52e013b9748b62124088d10ee1039d407767f0e494"},
     {"path":"src/evaluation/direction-a/formal/mem2-a1-budget-extension.test.ts","sha256":"f005f94b151e261d76daa01aaaa5774ca9df6fbe49f0c25ee2a78a6f02acfa32"},
     {"path":"src/evaluation/direction-a/formal/mem2-a1-planner.test.ts","sha256":"73db6c3e5f41b3ef61fe692eda565ffbd4005874e0aed477fa96526f979e829e"},

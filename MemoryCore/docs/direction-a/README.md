@@ -101,7 +101,7 @@ Post-T1 开发阶段稳定性检查：
 - Fresh 因果结果揭示前模型 / policy 冻结；
 - 日志、预算账本、SHA-256 binding 与恢复完整性机制；
 - 零 API 调用的确定性结果重建；
-- selected zero-provider tests；
+- 9 个 public selected zero-provider tests；
 - clean-directory portable R1 reproduction。
 
 ---
@@ -156,6 +156,9 @@ R1 用于核对最终 Fresh 结果，不需要重新调用模型服务商。
 portable 脚本、已冻结输出和 clean-directory 验证记录保存在 `analysis/`。
 完整 R1 需要最终提交包中的 allowlist 证据；本 GitHub 目录按公开边界不包含
 raw trajectory、provider payload、prepared-tasks 和 provenance-only 文件。
+因此，绑定这些 package-only 输入的 Fresh recovery closure test 不属于公开 selected surface；
+公开可运行的 9 个测试以 `reproducibility/FINAL_TEST_MANIFEST.json` 和
+`reproducibility/RUN_COMMANDS.md` 为准。
 
 该 portable 脚本已经通过 clean-directory 验证，并保持与原最终分析脚本相同的科学结果。
 
